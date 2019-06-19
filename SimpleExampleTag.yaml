@@ -1,8 +1,10 @@
-# Simple example to configure an EC2 instance with ACG
-# CloudFormation stack configuration
 Resources:
   Ec2Instance:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
       ImageId: ami-00c79db59589996b9
+      # adding a tag
+      Tags:
+        - Key: Name
+          Value: This is another YAML example but with a tag
