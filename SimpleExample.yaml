@@ -1,4 +1,5 @@
 # Simple example to configure an EC2 instance with ACG
+# CloudFormation stack configuration
 Resources:
   Ec2Instance:
     Type: "AWS::EC2::Instance"
