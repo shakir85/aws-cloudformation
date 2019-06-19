@@ -1,0 +1,7 @@
+# Simple example to configure an EC2 instance with ACG
+Resources:
+  Ec2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-00c79db59589996b9 # Amazon Linux AMI
