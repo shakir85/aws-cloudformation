@@ -7,8 +7,10 @@ Resources:
       # adding a tag
       Tags:
         - Key: Name
-          # apply join function for key: Name
-          Value: !Join [" ", [EC2, Instance, with, Fn, Join]]
+          Value: !Join
+            - ""
+            - - "EC2 Instance for region "
+              - !Ref AWS::Region
       SecurityGroups:
         - !Ref MySecurityGroup # kick in the next resource (linking)
   MySecurityGroup:
