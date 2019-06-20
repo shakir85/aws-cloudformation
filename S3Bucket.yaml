@@ -1,0 +1,8 @@
+Resources:
+  SimpleS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: FirstWebSite
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
