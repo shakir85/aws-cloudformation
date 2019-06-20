@@ -10,7 +10,7 @@ Resources:
           # apply join function for key: Name
           Value: !Join [" ", [EC2, Instance, with, Fn, Join]]
       SecurityGroups:
-        - !Ref MySecurityGroup # kick in the next resource
+        - !Ref MySecurityGroup # kick in the next resource (linking)
   MySecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Properties:
