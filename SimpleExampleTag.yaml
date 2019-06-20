@@ -9,3 +9,14 @@ Resources:
         - Key: Name
           # apply join function for key: Name
           Value: !Join [" ", [EC2, Instance, with, Fn, Join]]
+      SecurityGroups:
+        - !Ref MySecurityGroup # kick in the next resource
+  MySecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: "22"
+          ToPort: "22"
+          CidrIp: 0.0.0.0/0
