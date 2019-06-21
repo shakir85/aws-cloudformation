@@ -16,9 +16,10 @@ Resources:
       Tags:
         - Key: "Name"
           Value: !Ref NameOfService
-        KeyName: !Ref KeyName
+      KeyName: !Ref KeyName
       SecurityGroups:
         - !Ref MySecurityGroup # kick in the next resource (linking)
+
   MySecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Properties:
