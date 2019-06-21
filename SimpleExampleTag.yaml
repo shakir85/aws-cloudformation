@@ -32,5 +32,6 @@ Resources:
 
 Outputs:
   ServerDNS:
-    - Ec2Instance
-    - PublicDnsName
+    Value: !GetAtt
+      - Ec2Instance
+      - PublicDnsName
