@@ -33,5 +33,5 @@ Resources:
 Outputs:
   ServerDNS:
     Value: !GetAtt
-      - Ec2Instance
+      - EC2Instance
       - PublicDnsName
